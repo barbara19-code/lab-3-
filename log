@@ -108,3 +108,20 @@ Fri Sep 11 02:18:42 AM UTC 2026:
  tests:  16|1
 total_score: 50/60
 1152cfb
+Fri Sep 11 02:37:05 AM UTC 2026: 
+ hashmap.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:167:10: error: conflicting types for ‘antiguo’; have ‘long int’
+  167 |     long antiguo = map->capacity;
+      |          ^~~~~~~
+hashmap.c:166:13: note: previous definition of ‘antiguo’ with type ‘Pair **’
+  166 |     Pair ** antiguo = map->buckets;
+      |             ^~~~~~~
+hashmap.c:167:10: error: unused variable ‘antiguo’ [-Werror=unused-variable]
+  167 |     long antiguo = map->capacity;
+      |          ^~~~~~~
+cc1: all warnings being treated as errors
+1b1c02e
