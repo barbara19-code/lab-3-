@@ -163,8 +163,8 @@ Pair * nextMap(HashMap * map) {
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
     
-    Pair ** antiguo = map->buckets;
-    long antiguo = map->capacity;
+    Pair ** antiguoBuck = map->buckets;
+    long antiguoCapa = map->capacity;
 
     map -> capacity = map -> capacity * 2;
 
@@ -172,15 +172,15 @@ void enlarge(HashMap * map) {
 
     map -> size = 0;
 
-    for(long i = 0; i < antiguo; i++ ){
-        if(antiguo[i] != NULL){
-            if(antiguo[i] -> key != NULL){
-                insertMap(map, antiguo[i] -> key, antiguo[i] -> value);
+    for(long i = 0; i < antiguoCapa; i++ ){
+        if(antiguoBuck[i] != NULL){
+            if(antiguoBuck[i] -> key != NULL){
+                insertMap(map, antiguoBuck[i] -> key, antiguoBuck[i] -> value);
             }
-            free(antiguo[i]);
+            free(antiguoBuck[i]);
         }
     }
-    free(antiguo);
+    free(antiguoBuck);
 }
 
 
