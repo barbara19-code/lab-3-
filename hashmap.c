@@ -49,7 +49,7 @@ HashMap * createMap(long capacity) {
 
     if(map == NULL) return NULL;
 
-    map -> buckets = (Pair **) malloc(capacity, sizeof(Pair *));
+    map -> buckets = (Pair **) malloc(capacity * sizeof(Pair *));
     if(map -> buckets == NULL){
         free(map);
         return NULL;
