@@ -96,3 +96,11 @@ hashmap.c:142:47: error: expected expression before ‘>’ token
   142 |         if(map -> buckets[i] != NULL && map - > buckets[i] -> key != NULL){
       |                                               ^
 bdb578b
+Fri Sep 11 02:18:27 AM UTC 2026: 
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:132:47: error: expected expression before ‘>’ token
+  132 |         if(map -> buckets[i] != NULL && map - > buckets[i] -> key != NULL){
+      |                                               ^
+f0d8137
