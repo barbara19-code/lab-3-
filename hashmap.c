@@ -103,7 +103,6 @@ Pair * searchMap(HashMap * map,  char * key) {
             return map -> buckets[pos];
         }
         pos = (pos + 1) % map -> capacity;
-        
     }
 
     return NULL;
