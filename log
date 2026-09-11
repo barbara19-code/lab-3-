@@ -104,3 +104,7 @@ hashmap.c:132:47: error: expected expression before ‘>’ token
   132 |         if(map -> buckets[i] != NULL && map - > buckets[i] -> key != NULL){
       |                                               ^
 f0d8137
+Fri Sep 11 02:18:42 AM UTC 2026: 
+ tests:  16|1
+total_score: 50/60
+1152cfb
