@@ -55,9 +55,6 @@ HashMap * createMap(long capacity) {
         return NULL;
     }
 
-    for(long i = 0; i < capacity; i++){
-        map -> buckets[i] = NULL;
-    }
 
     map -> capacity = capacity;
     map -> size = 0;
