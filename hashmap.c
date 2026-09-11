@@ -46,9 +46,18 @@ int is_equal(void* key1, void* key2){
 
 HashMap * createMap(long capacity) {
     HashMap *map = (HashMap *) malloc(sizeof(HashMap));
+    if(map == NULL)return NULL;
 
     map -> buckets = (Pair **) malloc(capacity * sizeof(Pair *));
+    if(map -> buckets == NULL){
+        free(map);
+        return NULL;
+    }
 
+    for(long i = 0; i < capacity; i++){
+        map -> buckets[i] = NULL;
+    }
+    
     map -> capacity = capacity;
     map -> size = 0;
     map -> current = -1;
@@ -66,7 +75,7 @@ HashMap * createMap(long capacity) {
 // No inserte claves repetidas. Recuerde que el arreglo es circular. Recuerde actualizar la variable size.
 
 void insertMap(HashMap * map, char * key, void * value) {
-
+    
 }
 
 // 3. Implemente la función Pair * searchMap(HashMap * map, char * key), la cual retorna el Pair asociado a la clave ingresada. 
